@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Tweet Style Example</title>
+    <link type="text/css" rel="stylesheet" href="css/tweet-style.css">
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="js/tweet-dom-creator.js"></script>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+    </style>
+
+</head>
+<body>
+
+<!-- Create a tweet directly in the HTML page-->
+
+<div class="tweet clearfix">
+    <div class="profile-image">
+        <img src="https://pbs.twimg.com/profile_images/471285618576609281/jQC_S0LI_bigger.jpeg">
+    </div>
+    <div class="user-info">
+        <span class="username">
+            <a href="https://twitter.com/penguins" target="_blank">Pittsburgh Penguins</a>
+        </span>
+        <span class="screen-name">
+            @penguins
+        </span>
+        <span class="timestamp">
+            5:00 PM
+        </span>
+    </div>
+    <div class="tweet-content">
+        Congrats to @Coates_Burghfan! Michael is the lucky winner of a signed Lemieux jersey for #30YearsOf66. Check your DM!
+        <div class="tweet-image">
+            <img src="https://pbs.twimg.com/media/Bpx1dlTCEAA8RC8.jpg:large">
+        </div>
+    </div>
+</div>
+
+<script>
+
+    // Create a tweet using the Javascript library
+
+    var tweet = {
+        user : {
+            name : 'Gene',
+            screen_name : 'therealgene',
+            profile_image_url_https : '#'
+        },
+        text : 'Check this out',
+        created_at : '09/21/1989 4:09 am'
+    };
+    $("body").append(createTweetDom(tweet));
+
+</script>
+
+
+</body>
+</html>
